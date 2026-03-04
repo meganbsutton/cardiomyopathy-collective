@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Cardiomyopathy Collective</title>
-  <meta name="description" content="A collaborative platform bringing together biopharma, device, diagnostics, and data partners to improve outcomes for people living with cardiomyopathy." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
-    body { background: #F6F4F2; font-family: 'Outfit', sans-serif; }
-    .scroll-hide::-webkit-scrollbar { display: none; }
-    .scroll-hide { -ms-overflow-style: none; scrollbar-width: none; }
-  </style>
-</head>
-<body>
-  <div id="root"></div>
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script type="text/babel">
-const { useState, useRef, useEffect } = React;
+import { useState, useRef, useEffect } from "react";
 
 const C = {
   navy: "#0F2B3C",
@@ -129,7 +105,7 @@ function Nav() {
                 }} />
                 <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: C.sage, marginBottom: 10 }}>Contact</div>
                 <div style={{ fontSize: 14, fontWeight: 700, color: C.navy, marginBottom: 2 }}>Megan Sutton, DNP, ACNP</div>
-                <div style={{ fontSize: 12, color: C.sage, marginBottom: 10 }}>President, HeartGene Sciences</div>
+                <div style={{ fontSize: 12, color: C.sage, marginBottom: 10 }}>President, Heartgene Sciences</div>
                 <div
                   style={{ fontSize: 13, color: C.teal, fontWeight: 600, cursor: "pointer" }}
                   onClick={(e) => { e.stopPropagation(); navigator.clipboard.writeText("megan@heartgene.com"); }}
@@ -609,7 +585,7 @@ function CTAFooter() {
                   Megan Sutton, DNP, ACNP
                 </div>
                 <div style={{ fontSize: 13, color: C.sage, marginBottom: 12 }}>
-                  President, HeartGene Sciences
+                  President, Heartgene Sciences
                 </div>
                 <div style={{
                   fontSize: 14, color: C.teal, fontWeight: 600,
@@ -646,11 +622,11 @@ function CTAFooter() {
                 <span style={{ fontSize: 18, fontWeight: 700, color: C.lightTeal, letterSpacing: -0.5 }}>collective</span>
               </div>
               <p style={{ fontSize: 13, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, margin: "0 0 20px" }}>
-                The Cardiomyopathy Collective is organized by HeartGene Sciences, a cardiovascular genetics company committed to eliminating barriers to genetic testing and counseling.
+                The Cardiomyopathy Collective is organized by Heartgene Sciences, a cardiovascular genetics company committed to eliminating barriers to genetic testing and counseling.
               </p>
-              <div style={{ fontSize: 13, color: C.lightTeal, cursor: "pointer" }}>
-                Learn more about HeartGene &#8594;
-              </div>
+              <a href="https://heartgene.com/" target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: C.lightTeal, cursor: "pointer", textDecoration: "none" }}>
+                Learn more about Heartgene &#8594;
+              </a>
             </div>
 
             {/* Right: contact */}
@@ -663,7 +639,7 @@ function CTAFooter() {
                 Megan Sutton, DNP, ACNP
               </div>
               <div style={{ fontSize: 13, color: "rgba(255,255,255,0.45)", marginBottom: 8 }}>
-                President, HeartGene Sciences
+                President, Heartgene Sciences
               </div>
               <div style={{ fontSize: 13, color: C.lightTeal }}>
                 megan@heartgene.com
@@ -707,7 +683,7 @@ function CTAFooter() {
   );
 }
 
-function App() {
+export default function App() {
   return (
     <div style={{ fontFamily: f }}>
       <style>{css}</style>
@@ -723,10 +699,3 @@ function App() {
     </div>
   );
 }
-
-
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<App />);
-  </script>
-</body>
-</html>
