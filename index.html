@@ -103,7 +103,6 @@ const css = `
     .nav-arrows { display: none !important; }
     .nav-buttons { gap: 12px !important; }
     .nav-btn-text { display: none !important; }
-    .nav-btn-short { display: inline !important; }
   }
 
   @media (max-width: 480px) {
@@ -146,7 +145,7 @@ function Nav() {
           <span style={{ fontSize: 16, fontWeight: 700, color: C.lightTeal }}>collective</span>
         </div>
         <div className="nav-buttons" style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          
+          <a
             href="https://2fzx9i.share-eu1.hsforms.com/2NjEwB3BkQ0e7C3DDa2Zvdw"
             target="_blank"
             rel="noopener noreferrer"
@@ -155,25 +154,19 @@ function Nav() {
               color: C.white, fontSize: 12, fontWeight: 700, cursor: "pointer",
               textDecoration: "none",
             }}
-          >
-            <span className="nav-btn-text" style={{ display: "inline" }}>Join the Collective</span>
-            <span className="nav-btn-short" style={{ display: "none" }}>Join</span>
-          </a>
-          
+          >Join the Collective</a>
+          <a
             href="https://cardiomyopathy-collective.circle.so/feed"
             target="_blank"
             rel="noopener noreferrer"
             style={{
               padding: "8px 20px", borderRadius: 6,
               background: "transparent",
-              border: `1.5px solid ${C.lightTeal}`,
+              border: `1.5px solid ${C.white}`,
               color: C.white, fontSize: 12, fontWeight: 700, cursor: "pointer",
               textDecoration: "none",
             }}
-          >
-            <span className="nav-btn-text" style={{ display: "inline" }}>Member Login</span>
-            <span className="nav-btn-short" style={{ display: "none" }}>Login</span>
-          </a>
+          >Member Login</a>
         </div>
       </div>
     </nav>
@@ -603,12 +596,12 @@ function WhatsPossible() {
 
   const projects = [
     { title: "Know the Why.", desc: "A Collective-led education initiative to put etiologic diagnosis back at the center of heart failure care, alongside evidence-based treatment.", icon: "search" },
-    { title: "Find your trial. Find your specialist.", desc: "Working together to build a shared tool that connects patients to clinical trials and cardiomyopathy centers — making it easier to find the right care, wherever they are.", icon: "target" },
-    { title: "Prove it works — in real clinics.", desc: "Partner with select centers to pilot the Recognize, Define, Act framework in real-world cardiology, heart failure, and EP settings — and publish what we learn.", icon: "calendar" },
-    { title: "One stage. Every voice.", desc: "Amplifying our impact by bringing cardiomyopathy education to major medical societies together — one Collective, one message, a louder voice.", icon: "podium" },
-    { title: "Guidelines say test. Almost no one does. Change that.", desc: "Coordinated advocacy to make guideline-recommended genetic testing the standard of care — not the exception — for every patient with cardiomyopathy.", icon: "arrow" },
-    { title: "Ask the people who know.", desc: "Partnering across the Collective to survey patients and providers — learning what's working, what's not, and what matters most from the people closest to care.", icon: "voice" },
-    { title: "Speak the same language.", desc: "Aligning as a Collective on shared definitions for cardiomyopathy subtypes, diagnostic criteria, and care pathway terminology — so the field speaks with clarity and consistency.", icon: "doc" },
+    { title: "Find your trial. Find your specialist.", desc: "Working together to build a shared tool that connects patients to clinical trials and cardiomyopathy centers \u2014 making it easier to find the right care, wherever they are.", icon: "target" },
+    { title: "Prove it works \u2014 in real clinics.", desc: "Partner with select centers to pilot the Recognize, Define, Act framework in real-world cardiology, heart failure, and EP settings \u2014 and publish what we learn.", icon: "calendar" },
+    { title: "One stage. Every voice.", desc: "Amplifying our impact by bringing cardiomyopathy education to major medical societies together \u2014 one Collective, one message, a louder voice.", icon: "podium" },
+    { title: "Guidelines say test. Almost no one does. Change that.", desc: "Coordinated advocacy to make guideline-recommended genetic testing the standard of care \u2014 not the exception \u2014 for every patient with cardiomyopathy.", icon: "arrow" },
+    { title: "Ask the people who know.", desc: "Partnering across the Collective to survey patients and providers \u2014 learning what\u2019s working, what\u2019s not, and what matters most from the people closest to care.", icon: "voice" },
+    { title: "Speak the same language.", desc: "Aligning as a Collective on shared definitions for cardiomyopathy subtypes, diagnostic criteria, and care pathway terminology \u2014 so the field speaks with clarity and consistency.", icon: "doc" },
     { title: "One diagnosis. An entire family protected.", desc: "Cascade testing support so every positive result leads to family screening and long-term care.", icon: "family" },
   ];
 
@@ -788,7 +781,7 @@ function CTAFooter() {
           </h2>
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.6)", lineHeight: 1.6, margin: "0 0 40px" }}>
           </p>
-          
+          <a
             href="https://2fzx9i.share-eu1.hsforms.com/2NjEwB3BkQ0e7C3DDa2Zvdw"
             target="_blank"
             rel="noopener noreferrer"
